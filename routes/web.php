@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/deshboard',[HomeController::class, 'index'])->name('deshboard');
+Route::post('/deshboard',[HomeController::class, 'submitindex'])->name('deshboard');
+Route::get('/data',[HomeController::class, 'submitindex'])->name('data');
+Route::get('/add/name',[HomeController::class, 'addname'])->name('name');
+Route::post('/add/name',[HomeController::class, 'submitaddname'])->name('submit');
