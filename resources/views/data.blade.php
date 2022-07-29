@@ -27,7 +27,7 @@
             </form>
         </div>
         <hr>
-        <div class="panel panel-default">
+        <!-- <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title"> <span class="glyphicon glyphicon-user">  </span> Your Data</h3>
             </div>
@@ -53,7 +53,14 @@
             <center><button class="btn btn-success" style="width: 20%;" onclick="copyToClipboard('#myTable')">Copy!!</button></center>
             <br>
         </div>
+        </div> -->
+        <div id="myTable" >
+            @foreach($datas as $data)
+                {{$data->name}}
+            @endforeach
         </div>
+        <br>
+        <center><button class="btn btn-success" style="width: 20%;" onclick="copyToClipboard('#myTable')">Copy!!</button></center>
         @endsection
         <script>
             function copyToClipboard(element) {
