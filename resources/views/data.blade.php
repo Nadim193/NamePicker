@@ -54,11 +54,11 @@
             <br>
         </div>
         </div> -->
-        <div id="myTable" >
+        <p id="myTable" >
             @foreach($datas as $data)
                 {{$data->name}}
             @endforeach
-        </div>
+        </p>
         <br>
         <center><button class="btn btn-success" style="width: 20%;" onclick="copyToClipboard('#myTable')">Copy!!</button></center>
         @endsection
